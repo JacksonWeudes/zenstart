@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZenStart</title> 
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
+    <div class="overlay"></div>
+
     <header>
         <div class="logo">
             <h1>ZENSTART</h1>
         </div>
 
         <div class="menu-icon">
-            <button><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M360-240v-80h480v80H360Zm0-200v-80h480v80H360ZM120-640v-80h720v80H120Z"/></svg></button>
+            <button class="toggle-btn"><i class="ph ph-list"></i></button>
         </div>
     </header>
 
     <aside class="menu-mobile">
+        <div class="exit-icon">
+            <button class="toggle-btn"><i class="ph ph-x"></i></button>
+        </div>
+
         <ul>
             <li><a href="#">Ínicio</a></li>
             <li><a href="#">Benefícios</a></li>
@@ -28,7 +34,13 @@
     </aside>
 
     <main> 
-        <section class="hero">
+        <section class="hero-back">
+            <video autoplay muted loop src="" >
+                Seu navegador não suporta vídeos Mp4 em HTML 
+            </video>
+        </section>
+
+        <section class="hero-content">
             <h1>Encontre sua paz em minutos.</h1>
             <p>Metidações guiadas para iniciantes</p>
             <button>Comece agora</button>
@@ -65,13 +77,63 @@
             <h2>Depoimentos</h2>
 
             <div class="testimonials-container">
+                <div class="card">
+                    <p>Sou iniciante em meditação, mas com o ZenStart me senti acolhido desde o primeiro dia. O tom de voz, os sons, tudo ajuda a relaxar.</p>
+                    <span>— Luiz R.</span>
+                </div>
+
+                <div class="card">
+                    <p>Nunca pensei que 10 minutos por dia fariam tanta diferença. O ZenStart virou meu refúgio diário — é quando eu respiro de verdade.</p>
+                    <span>— Aline V.</span>
+                </div>
+
+                <div class="card">
+                    <p>Acordar e usar o ZenStart antes do café da manhã virou meu ritual. Me sinto mais centrada, menos reativa. É mágico.</p>
+                    <span>— Renata G.</span>
+                </div>
+
+                <div class="card">
+                    <p>"A interface é tão tranquila quanto o conteúdo. Tudo convida à calma. Já recomendei pra amigos e até meus pais!"</p>
+                    <span>— Eduardo L.</span>
+                </div>
+
+                <div class="card">
+                    <p>Já testei outros apps de meditação, mas nenhum tinha a leveza e a sensibilidade do ZenStart. Parece feito pra mim</p>
+                    <span>— Camila P.</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="sign-up">
+            <h2>Pronto para começar?</h2>
+
+            <form action="">
+                <input type="email" id="signE" required placeholder="Email">
+                <label for=""><i class="ph ph-envelope-simple"></i></label>
+
+                <input type="password" id="signP" required placeholder="Senha">
+                <label for="signP"><i class="ph ph-lock-simple"></i></label>
                 
+                <button>Criar Conta</button>
+            </form>
+
+            <p>Ou entre usando uma das plataformas abaixo.</p>
+            <div class="social-media">
+                <a href="#"><i class="ph ph-facebook-logo"></i></a>
+                <a href="#"><i class="ph ph-google-logo"></i></a>
+                <a href="#"><i class="ph ph-linkedin-logo"></i></a>
+                <a href="#"><i class="ph ph-github-logo"></i></a>
             </div>
         </section>
     </main>
 
     <footer>
+        <h2>ZenStart</h2>
+        <h3>contato</h3>
 
+        <a href="#">GITHUB</a>
+
+        <p>@ZenStart</p>
     </footer>
 </body>
 </html>
