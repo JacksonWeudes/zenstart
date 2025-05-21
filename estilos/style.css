@@ -4,6 +4,7 @@
 
 :root {
     --main-font: "Poppins", sans-serif, arial;
+    --logo-font: ;
 }
 
 * {
@@ -15,7 +16,10 @@
 
 body {
     position: relative;
-    overflow-x: hidden;
+}
+
+body.no-scroll {
+    overflow: hidden;
 }
 
 header {
@@ -26,7 +30,7 @@ header {
     align-items: center;
     padding: .5rem 1.1rem;
     z-index: 9;
-    background-color: #0080002f;
+    background-color: #fff;
 }
 
 .toggle-btn {
@@ -39,16 +43,23 @@ header {
 }
 
 .menu-mobile {
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: -60%;
-    width: 60%;
-    height: 100vh;
+    left: -100%;
+    width: 100%;
+    height: 100%;
     z-index: 99;
-    background-color: #b8b8b8;
+    background-color: #0000002a;
+    backdrop-filter: blur(10px);
+    transition: 0.6s ease-in-out;
 
     button {
         padding: 10px;
+        font-weight: 800;
+    }
+
+    nav {
+        height: 100%;
     }
 
     ul {
@@ -61,12 +72,12 @@ header {
         height: 90%;
 
         list-style: none;
-        font-size: 1.9rem;
         text-align: center;
     }
 
     a {
         text-decoration: none;
+        font-size: 2.3rem;
         color: #000;
 
         &:hover {
@@ -75,12 +86,58 @@ header {
     }
 }
 
-main {
-    overflow-x: hidden;
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90dvh;
+    overflow: hidden;
+    background-image: linear-gradient(
+        to top, #ffffff, transparent, transparent, transparent
+    );
+
+    .hero-widgets {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.1rem;
+
+        width: 100%;
+        height: 70%;
+        text-align: center;
+    }
+
+    .video-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+    }
+
+    button {
+        cursor: pointer;
+        padding: 10px 15px;
+        font-size: 1.1rem;
+        font-weight: 600;
+
+        border: 1px solid;
+        border-radius: 40px;
+        outline: none;
+        background-color: transparent;
+    }
 }
 
-.hero-back {
-    position: relative;
-    height: 100dvh;
-    width: 100%;
-}

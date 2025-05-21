@@ -8,42 +8,42 @@
     <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
-    <div class="overlay"></div>
-
     <header>
         <div class="logo">
             <h1>ZENSTART</h1>
         </div>
 
         <div class="menu-icon">
-            <button class="toggle-btn"><i class="ph ph-list"></i></button>
+            <button class="toggle-btn" id="open"><i class="ph ph-list"></i></button>
         </div>
     </header>
 
-    <aside class="menu-mobile">
+    <aside class="menu-mobile" id="side-menu">
         <div class="exit-icon">
-            <button class="toggle-btn"><i class="ph ph-x"></i></button>
+            <button class="toggle-btn" id="close"><i class="ph ph-x"></i></button>
         </div>
 
-        <ul>
-            <li><a href="#">Ínicio</a></li>
-            <li><a href="#">Benefícios</a></li>
-            <li><a href="#">Depoimentos</a></li>
-            <li><a href="#">Contato</a></li>
-        </ul>
+        <nav>
+            <ul>
+                <li><a href="#">Ínicio</a></li>
+                <li><a href="#">Benefícios</a></li>
+                <li><a href="#">Depoimentos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
     </aside>
 
     <main> 
-        <section class="hero-back">
-            <video autoplay muted loop src="" >
-                Seu navegador não suporta vídeos Mp4 em HTML 
-            </video>
-        </section>
+        <section class="hero">
+            <div class="hero-widgets">
+                <h1>Encontre sua paz em minutos.</h1>
+                <p>Metidações guiadas para iniciantes</p>
+                <button>Comece agora</button>
+            </div>
 
-        <section class="hero-content">
-            <h1>Encontre sua paz em minutos.</h1>
-            <p>Metidações guiadas para iniciantes</p>
-            <button>Comece agora</button>
+            <video class="video-bg" src="assets/hero-back.mp4" autoplay loop muted>
+
+            </video>
         </section>
 
         <section class="benefits">
@@ -135,5 +135,7 @@
 
         <p>@ZenStart</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
