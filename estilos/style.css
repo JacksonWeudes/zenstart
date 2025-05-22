@@ -1,10 +1,13 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 :root {
+    --title-font: "Dancing Script", "cursive" , arial, sans-serif;
     --main-font: "Poppins", sans-serif, arial;
-    --logo-font: ;
+    --cor-principal: #A8BF56;
+    --cor-secundaria: #D5F26D;
 }
 
 * {
@@ -28,9 +31,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .5rem 1.1rem;
+    padding: .5rem 1.2rem;
     z-index: 9;
-    background-color: #fff;
+    background-color: var(--cor-principal);
+    color: #fff;
+}
+
+.logo {
+    font-family: var(--logo-font);
 }
 
 .toggle-btn {
@@ -40,6 +48,7 @@ header {
     border: none;
     outline: none;
     background-color: transparent;
+    color: #fff;
 }
 
 .menu-mobile {
@@ -49,8 +58,7 @@ header {
     width: 100%;
     height: 100%;
     z-index: 99;
-    background-color: #0000002a;
-    backdrop-filter: blur(10px);
+    background-color: var(--cor-principal);
     transition: 0.6s ease-in-out;
 
     button {
@@ -78,7 +86,7 @@ header {
     a {
         text-decoration: none;
         font-size: 2.3rem;
-        color: #000;
+        color: #fff;
 
         &:hover {
             text-decoration: underline;
@@ -94,9 +102,7 @@ header {
     align-items: center;
     height: 90dvh;
     overflow: hidden;
-    background-image: linear-gradient(
-        to top, #ffffff, transparent, transparent, transparent
-    );
+    background-color: #0000ff56;
 
     .hero-widgets {
         display: flex;
@@ -108,6 +114,7 @@ header {
         width: 100%;
         height: 70%;
         text-align: center;
+        color: #fff;
     }
 
     .video-bg {
@@ -117,6 +124,7 @@ header {
         min-width: 100%;
         min-height: 100%;
         z-index: -1;
+        
         
     }
 
@@ -134,10 +142,52 @@ header {
         font-size: 1.1rem;
         font-weight: 600;
 
-        border: 1px solid;
+        border: 1px solid var(--cor-secundaria);
         border-radius: 40px;
         outline: none;
-        background-color: transparent;
+        background-color: var(--cor-principal);
+        color: #fff;
     }
 }
 
+.benefits {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: .9rem;
+    height: auto;
+    padding-block: 1.2rem;
+    text-align: center;
+    background-color: #ff00002f;
+
+    h2 {
+        font-size: 10vw;
+    }
+
+    .benefits-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        width: 80%;
+        height: 100%;
+        padding: 1.1rem 1.2rem;
+        margin: auto;
+        border-radius: 10px;
+        border: 1px solid;
+        transition: .5s ease-in-out;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        h3 {
+            width: 100%;
+        }
+
+        p {
+            padding-block: 1rem;
+            width: 70%;
+        }
+    }
+}
