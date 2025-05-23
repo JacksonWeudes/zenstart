@@ -160,7 +160,10 @@ header {
     background-color: #ff00002f;
 
     h2 {
-        font-size: 10vw;
+        font-size: 9vw;
+        border-bottom: 3px solid;
+        width: max-content;
+        margin: auto;
     }
 
     .benefits-item {
@@ -188,6 +191,57 @@ header {
         p {
             padding-block: 1rem;
             width: 70%;
+        }
+    }
+}
+
+.testimonials {
+    padding-block: 1.2rem;
+    background-color: #fffb0044;
+
+    h2 {
+        font-size: 9vw;
+        border-bottom: 3px solid;
+        width: max-content;
+        margin: auto;
+    }
+
+    .testimonials-container {
+        border: 1px solid;
+
+        .card-list {
+            list-style: none;
+            border: 1px solid;
+
+            .card {
+                user-select: none;
+                display: block;
+                height: 300px;
+                padding: 1.2rem;
+                margin: auto;
+                border-radius: 10px;
+                border: 1px solid;
+                font-size: 1.1rem;
+
+                .profile {
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    gap: 1.2rem;
+                }
+
+                img {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                }
+
+                p {
+
+                    width: 100%;
+                    margin-block-start: 1.3rem;
+                }
+            }
         }
     }
 }

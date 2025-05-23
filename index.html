@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ZenStart</title> 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
@@ -73,34 +74,40 @@
             </div>
         </section>  
 
-        <section class="testimonials">
+        <section class="testimonials swiper">
             <h2>Depoimentos</h2>
 
             <div class="testimonials-container">
-                <div class="card">
-                    <p>Sou iniciante em meditação, mas com o ZenStart me senti acolhido desde o primeiro dia. O tom de voz, os sons, tudo ajuda a relaxar.</p>
-                    <span>— Luiz R.</span>
-                </div>
+                <ul class="card-list swiper-wrapper">
+                    <li class="card swiper-slide">
+                        <span class="profile"><img src="assets/mprof1.jpg" alt="foto-perfil"> Luiz R.</span>
+                        <p>Sou iniciante em meditação, mas com o ZenStart me senti acolhido desde o primeiro dia. O tom de voz, os sons, tudo ajuda a relaxar.</p>
+                    </li>
 
-                <div class="card">
-                    <p>Nunca pensei que 10 minutos por dia fariam tanta diferença. O ZenStart virou meu refúgio diário — é quando eu respiro de verdade.</p>
-                    <span>— Aline V.</span>
-                </div>
+                    <li class="card swiper-slide">
+                        <span class="profile"><img src="assets/wprof1.jpg" alt="foto-perfil"> Aline V.</span>
+                        <p>Nunca pensei que 10 minutos por dia fariam tanta diferença. O ZenStart virou meu refúgio diário — é quando eu respiro de verdade.</p>
+                    </li>
 
-                <div class="card">
-                    <p>Acordar e usar o ZenStart antes do café da manhã virou meu ritual. Me sinto mais centrada, menos reativa. É mágico.</p>
-                    <span>— Renata G.</span>
-                </div>
+                    <li class="card swiper-slide">
+                        <span class="profile"><img src="assets/wprof2.jpg" alt="foto-perfil"> Renata G.</span>
+                        <p>Acordar e usar o ZenStart antes do café da manhã virou meu ritual. Me sinto mais centrada, menos reativa. É mágico.</p>
+                    </li>
 
-                <div class="card">
-                    <p>"A interface é tão tranquila quanto o conteúdo. Tudo convida à calma. Já recomendei pra amigos e até meus pais!"</p>
-                    <span>— Eduardo L.</span>
-                </div>
+                    <li class="card swiper-slide">
+                        <span class="profile"><img src="assets/mprof2.jpg" alt="foto-perfil"> Eduardo L.</span>
+                        <p>A interface é tão tranquila quanto o conteúdo. Tudo convida à calma. Já recomendei pra amigos e até meus pais!"</p>
+                    </li>
 
-                <div class="card">
-                    <p>Já testei outros apps de meditação, mas nenhum tinha a leveza e a sensibilidade do ZenStart. Parece feito pra mim</p>
-                    <span>— Camila P.</span>
-                </div>
+                    <li class="card swiper-slide">
+                        <span class="profile"><img src="assets/wprof3.jpg" alt="foto-perfil"> Camila P.</span>
+                        <p>Já testei outros apps de meditação, mas nenhum tinha a leveza e a sensibilidade do ZenStart. Parece feito pra mim</p>
+                    </li>
+                </ul>
+
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
         </section>
 
@@ -136,6 +143,7 @@
         <p>@ZenStart</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
