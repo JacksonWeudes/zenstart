@@ -25,6 +25,13 @@ body.no-scroll {
     overflow: hidden;
 }
 
+h2 {
+    font-size: 2.3rem;
+    border-bottom: 3px solid;
+    width: max-content;
+    margin: auto;
+}
+
 header {
     position: sticky;
     top: 0;
@@ -100,7 +107,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90dvh;
+    height: 97dvh;
     overflow: hidden;
     background-color: #0000ff56;
 
@@ -159,13 +166,6 @@ header {
     text-align: center;
     background-color: #ff00002f;
 
-    h2 {
-        font-size: 9vw;
-        border-bottom: 3px solid;
-        width: max-content;
-        margin: auto;
-    }
-
     .benefits-item {
         display: flex;
         flex-direction: column;
@@ -199,26 +199,17 @@ header {
     padding-block: 1.2rem;
     background-color: #fffb0044;
 
-    h2 {
-        font-size: 9vw;
-        border-bottom: 3px solid;
-        width: max-content;
-        margin: auto;
-    }
-
     .testimonials-container {
-        border: 1px solid;
-
         .card-list {
+            display: grid;
+            grid-template-columns: 1fr;
             list-style: none;
-            border: 1px solid;
 
             .card {
-                user-select: none;
-                display: block;
+                width: 70%;
                 height: 300px;
                 padding: 1.2rem;
-                margin: auto;
+                margin: 1.1rem auto;
                 border-radius: 10px;
                 border: 1px solid;
                 font-size: 1.1rem;
@@ -234,14 +225,97 @@ header {
                     width: 70px;
                     height: 70px;
                     border-radius: 50%;
-                }
-
-                p {
-
-                    width: 100%;
-                    margin-block-start: 1.3rem;
+                    margin-bottom: .9rem;
                 }
             }
         }
     }
+}
+
+.sign-up {
+    padding-block: 1.2rem;
+    background-color: #ff000038;
+
+    .login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            width: 80%;
+            margin-block: 1rem;
+        }
+    }
+
+    button {
+        width: 90%;
+        padding: 10px 15px;
+        font-size: 1.2rem;
+        border-radius: 40px;
+        border: none;
+        outline: none;
+    }
+}
+
+.input-box {
+    width: 90%;
+    padding: 2px 5px 2px 2px;
+    border-radius: 40px;
+    background-color: var(--cor-principal);
+
+    input {
+        width: 90%;
+        padding: 10px 15px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 40px;
+        outline: none;
+    }
+
+    label {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #fff;
+    }
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 80%;
+    margin-block: 1.2rem;
+
+    a {
+        width: 50px;
+        height: 50px;
+
+        text-decoration: none;
+        text-align: center;
+        line-height: 50px;
+        font-size: 1.5rem;
+
+        border-radius: 10px;
+        background-color: var(--cor-principal);
+        color: #fff;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
 }
