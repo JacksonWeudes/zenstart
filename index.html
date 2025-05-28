@@ -6,6 +6,7 @@
     <title>ZenStart</title> 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/media.css">
 </head>
 <body>
     <header>
@@ -14,21 +15,21 @@
         </div>
 
         <div class="menu-icon">
-            <button class="toggle-btn" id="open"><i class="ph ph-list"></i></button>
+            <button class="toggle-btn" id="open" onclick="openMenu()"><i class="ph ph-list"></i></button>
         </div>
     </header>
 
     <aside class="menu-mobile" id="side-menu">
-        <div class="exit-icon">
+        <div class="exit-icon" onclick="closeMenu()">
             <button class="toggle-btn" id="close"><i class="ph ph-x"></i></button>
         </div>
 
         <nav>
             <ul>
-                <li><a href="#">Ínicio</a></li>
-                <li><a href="#">Benefícios</a></li>
-                <li><a href="#">Depoimentos</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a onclick="closeMenu()" href="#">Ínicio</a></li>
+                <li><a onclick="closeMenu()" href="#Bsection">Benefícios</a></li>
+                <li><a onclick="closeMenu()" href="#Csection">Depoimentos</a></li>
+                <li><a onclick="closeMenu()" href="#Dsection">Contato</a></li>
             </ul>
         </nav>
     </aside>
@@ -46,34 +47,37 @@
             </video>
         </section>
 
-        <section class="benefits">
+        <section class="benefits" id="Bsection">
             <h2>Benefícios</h2>
-            <div class="benefits-item">
-                <img src="" alt="">
-                <h3>Meditações guiadas e rápidas</h3>
-                <p>Perfeito pra quem tem pouco tempo mas quer relaxar de verdade. Só alguns minutos e pronto!</p>
-            </div>
 
-            <div class="benefits-item">
-                <img src="" alt="">
-                <h3>Personalização do seu momento zen</h3>
-                <p>Você escolhe o estilo, a duração, e a vibe que mais combina com seu dia.</p>
-            </div>
-
-            <div class="benefits-item">
-                <img src="" alt="">
-                <h3>Monitoramento do seu progresso</h3>
-                <p>Veja como você evolui na meditação e ganha cada vez mais calma e foco.</p>
-            </div>
-
-            <div class="benefits-item">
-                <img src="" alt="">
-                <h3>Conteúdo novo toda semana</h3>
-                <p>Porque ficar na mesmice não é com a gente — sempre tem algo novo pra você.</p>
+            <div class="benefits-box">
+                <div class="benefits-item">
+                    <img src="" alt="">
+                    <h3>Meditações guiadas e rápidas</h3>
+                    <p>Perfeito pra quem tem pouco tempo mas quer relaxar de verdade. Só alguns minutos e pronto!</p>
+                </div>
+    
+                <div class="benefits-item">
+                    <img src="" alt="">
+                    <h3>Personalização do seu momento zen</h3>
+                    <p>Você escolhe o estilo, a duração, e a vibe que mais combina com seu dia.</p>
+                </div>
+    
+                <div class="benefits-item">
+                    <img src="" alt="">
+                    <h3>Monitoramento do seu progresso</h3>
+                    <p>Veja como você evolui na meditação e ganha cada vez mais calma e foco.</p>
+                </div>
+    
+                <div class="benefits-item">
+                    <img src="" alt="">
+                    <h3>Conteúdo novo toda semana</h3>
+                    <p>Porque ficar na mesmice não é com a gente — sempre tem algo novo pra você.</p>
+                </div>
             </div>
         </section>  
 
-        <section class="testimonials swiper">
+        <section class="testimonials" id="Csection">
             <h2>Depoimentos</h2>
 
             <div class="testimonials-container">
@@ -108,8 +112,8 @@
             </div>
         </section>
 
-        <section class="sign-up">
-            <h2>Pronto para começar?</h2>
+        <section class="sign-up" id="Dsection">
+            <h2>Comece agora!</h2>
 
             <div class="login">
                 <form action="">
@@ -126,7 +130,7 @@
                     <button>Criar Conta</button>
                 </form>
 
-                <p>Ou entre usando uma das plataformas abaixo.</p>
+                <p>Ou crie usando uma das plataformas abaixo.</p>
                 <div class="social-media">
                     <a href="#"><i class="ph ph-facebook-logo"></i></a>
                     <a href="#"><i class="ph ph-google-logo"></i></a>

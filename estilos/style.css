@@ -1,10 +1,13 @@
 @charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 
 :root {
-    --title-font: "Dancing Script", "cursive" , arial, sans-serif;
+    --h1-font: "DM Serif Display", Serif, arial, sans-serif;
+    --h2-font: "Pacifico", "cursive", arial, sans-serif;
     --main-font: "Poppins", sans-serif, arial;
     --cor-1: #31572c;
     --cor-2: #4f772d;
@@ -29,10 +32,13 @@ body.no-scroll {
 }
 
 h2 {
-    font-size: 2.3rem;
+    font-family: var(--h2-font);
+    font-size: 2.5rem;
+    font-weight: normal;
     border-bottom: 3px solid;
     width: max-content;
     margin: auto;
+    color: var(--cor-5);
 }
 
 header {
@@ -47,8 +53,8 @@ header {
     color: #fff;
 }
 
-.logo {
-    font-family: var(--logo-font);
+.logo h1 {
+    font-family: var(--h1-font);
 }
 
 .toggle-btn {
@@ -95,7 +101,9 @@ header {
 
     a {
         text-decoration: none;
-        font-size: 2.3rem;
+        font-family: var(--h2-font);
+        font-size: 3rem;
+        font-weight: normal;
         color: #fff;
 
         &:hover {
@@ -110,8 +118,11 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 97dvh;
+    height: 100dvh;
     overflow: hidden;
+    background-image: linear-gradient(
+        to top, var(--cor-4), transparent, transparent, transparent
+    );
 
     .hero-widgets {
         display: flex;
@@ -139,7 +150,7 @@ header {
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 2.3rem;
         text-shadow: 3px 3px 5px #000;
     }
 
@@ -156,19 +167,30 @@ header {
         border-radius: 40px;
         outline: none;
         border: none;
+        box-shadow: 0 8px 10px #00000081;
         background-color: var(--cor-2);
         color: #fff;
+        transition: .3s ease-in-out;
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }
 
+
 .benefits {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: .9rem;
     height: auto;
     padding-block: 1.2rem;
     text-align: center;
     background-color: #ecf39e;
+
+    .benefits-box {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: .9rem;
+        padding-block: 1rem;
+    }
 
     .benefits-item {
         display: flex;
@@ -217,6 +239,7 @@ header {
                 margin: 1.1rem auto;
                 border-radius: 10px;
                 font-size: 1.1rem;
+                box-shadow: 0 8px 10px #0000006c;
                 background-color: var(--cor-4);
 
                 .profile {
@@ -253,7 +276,7 @@ header {
             justify-content: center;
             align-items: center;
             gap: 1rem;
-            width: 80%;
+            max-width: 80%;
             margin-block: 1rem;
         }
     }
