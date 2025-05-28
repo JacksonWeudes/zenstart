@@ -6,8 +6,11 @@
 :root {
     --title-font: "Dancing Script", "cursive" , arial, sans-serif;
     --main-font: "Poppins", sans-serif, arial;
-    --cor-principal: #A8BF56;
-    --cor-secundaria: #D5F26D;
+    --cor-1: #31572c;
+    --cor-2: #4f772d;
+    --cor-3: #90a955;
+    --cor-4: #ecf39e;
+    --cor-5: #132a13;
 }
 
 * {
@@ -40,7 +43,7 @@ header {
     align-items: center;
     padding: .5rem 1.2rem;
     z-index: 9;
-    background-color: var(--cor-principal);
+    background-color: var(--cor-1);
     color: #fff;
 }
 
@@ -65,7 +68,7 @@ header {
     width: 100%;
     height: 100%;
     z-index: 99;
-    background-color: var(--cor-principal);
+    background-color: var(--cor-1);
     transition: 0.6s ease-in-out;
 
     button {
@@ -109,7 +112,6 @@ header {
     align-items: center;
     height: 97dvh;
     overflow: hidden;
-    background-color: #0000ff56;
 
     .hero-widgets {
         display: flex;
@@ -126,21 +128,24 @@ header {
 
     .video-bg {
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         min-width: 100%;
         min-height: 100%;
+        width: auto;
+        height: auto;
         z-index: -1;
-        
-        
     }
 
     h1 {
         font-size: 2rem;
+        text-shadow: 3px 3px 5px #000;
     }
 
     p {
         font-size: 1.2rem;
+        text-shadow: 3px 3px 5px #000;
     }
 
     button {
@@ -148,11 +153,10 @@ header {
         padding: 10px 15px;
         font-size: 1.1rem;
         font-weight: 600;
-
-        border: 1px solid var(--cor-secundaria);
         border-radius: 40px;
         outline: none;
-        background-color: var(--cor-principal);
+        border: none;
+        background-color: var(--cor-2);
         color: #fff;
     }
 }
@@ -164,7 +168,7 @@ header {
     height: auto;
     padding-block: 1.2rem;
     text-align: center;
-    background-color: #ff00002f;
+    background-color: #ecf39e;
 
     .benefits-item {
         display: flex;
@@ -177,7 +181,8 @@ header {
         padding: 1.1rem 1.2rem;
         margin: auto;
         border-radius: 10px;
-        border: 1px solid;
+        color: var(--cor-5);
+        background-color: var(--cor-3);
         transition: .5s ease-in-out;
 
         &:hover {
@@ -197,7 +202,7 @@ header {
 
 .testimonials {
     padding-block: 1.2rem;
-    background-color: #fffb0044;
+    background-color: var(--cor-3);
 
     .testimonials-container {
         .card-list {
@@ -211,8 +216,8 @@ header {
                 padding: 1.2rem;
                 margin: 1.1rem auto;
                 border-radius: 10px;
-                border: 1px solid;
                 font-size: 1.1rem;
+                background-color: var(--cor-4);
 
                 .profile {
                     display: flex;
@@ -234,7 +239,7 @@ header {
 
 .sign-up {
     padding-block: 1.2rem;
-    background-color: #ff000038;
+    background-color: #ecf39e;
 
     .login {
         display: flex;
@@ -257,9 +262,12 @@ header {
         width: 90%;
         padding: 10px 15px;
         font-size: 1.2rem;
+        font-weight: 600;
+        color: #fff;
         border-radius: 40px;
         border: none;
         outline: none;
+        background-color: #90a955;
     }
 }
 
@@ -267,7 +275,7 @@ header {
     width: 90%;
     padding: 2px 5px 2px 2px;
     border-radius: 40px;
-    background-color: var(--cor-principal);
+    background-color: var(--cor-3);
 
     input {
         width: 90%;
@@ -303,7 +311,7 @@ header {
         font-size: 1.5rem;
 
         border-radius: 10px;
-        background-color: var(--cor-principal);
+        background-color: var(--cor-3);
         color: #fff;
         transition: 0.3s ease-in-out;
 
@@ -318,4 +326,11 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
+    color: #fff;
+    background-color: #132a13;
+
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
 }
