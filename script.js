@@ -1,5 +1,11 @@
 const menu = document.getElementById("side-menu")
-const menuLinks = document.querySelector("a.menu-op")
+const menuLinks = document.getElementsByClassName("menu-link")
+
+Array.from(menuLinks).forEach(link => {
+    link.addEventListener("click", () => {
+        closeMenu()
+    })
+})
 
 function openMenu(){
     menu.style.left = "0"
