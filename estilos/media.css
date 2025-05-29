@@ -1,5 +1,79 @@
 @charset "UTF-8";
 
-@media screen  and (min-width: 769px) and (max-width: 992px) {
+@media screen and (min-width: 992px) {
+    header {
+        padding-inline: 2.5rem;
+    }
 
+    .toggle-btn {
+        display: none;
+    }
+
+    .menu-desk {
+        display: block;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.2rem;
+            list-style: none;
+        }
+
+        a {
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: #fff;
+        }
+    }
+
+    .hero {
+        height: 140dvh;
+
+        .hero-widgets {
+            position: absolute;
+            top: 0;
+
+            h1 {
+                font-size: 3rem;
+            }
+
+            p {
+                font-size: 1.5rem;
+            }
+
+            button {
+                min-width: 200px;
+            }
+        }
+    }
+
+    .benefits .benefits-box {
+        grid-template-columns: repeat(2, 1fr);
+        padding-block: 2rem;
+
+        .benefits-item {
+            width: 75%;
+            height: 250px;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+    }
+
+    .testimonials 
+    .testimonials-container
+    .card-list
+    .card {
+        width: 50%;
+    }
+
+    .sign-up {
+        .login {
+            form {
+                width: 30%;
+            }
+        }
+    }
 }
